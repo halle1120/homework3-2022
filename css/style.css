@@ -138,7 +138,7 @@ img{
   grid-row: 1/2;
 }
 
-.clients, .client-image{
+.clients, .clients-image{
   grid-row: 2/3;
 }
 

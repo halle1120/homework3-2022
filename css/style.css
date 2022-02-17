@@ -97,7 +97,7 @@ a.skip{
 
 /* Requirement 4 code here*/
 a:focus{
-  border-top: 2px solid yellow;
+  border-top: 2px yellow solid;
   text-decoration: none;
 }
 

@@ -71,13 +71,13 @@ footer a:visited{
 /*****  End Starter Code ****/
 
 /* Requirement 1 code here*/
-nav a:link{
+nav li{
   text-decoration: none;
 }
 
 
 /* Requirement 2 code here*/
-nav a:hover{
+nav li:hover{
   text-decoration: wavy underline;
 }
 
@@ -91,13 +91,14 @@ a.skip{
   z-index: 1;
   /* Requirement 3 code here*/
   position: aboslute;
-  transform: translateX(-500px);
+  left: -500px;
 }
 
 
 /* Requirement 4 code here*/
-nav a:focus{
-  border: 2px solid yellow;
+a:focus{
+  border-top: 2px solid yellow;
+  text-decoration: none;
 }
 
 
@@ -120,34 +121,44 @@ nav a:focus{
   background-size: cover;
 }
 
-.about, .clients, .method, .contact{
-  grid-column: 2/3;
+.about,
+.clients,
+.method,
+.contact{
+  grid-column: 2;
 }
 
 img{
   width: 100%
 }
 
-.about-image, .clients-image, .method-image, .contact-image{
+.about-image,
+.clients-image,
+.method-image,
+.contact-image{
   grid-column: 1/4;
   max-height: 500px;
   overflow: hidden;
 }
 
-.about, .about-image{
-  grid-row: 1/2;
+.about,
+.about-image{
+  grid-row: 1 / span 1;
 }
 
-.clients, .clients-image{
-  grid-row: 2/3;
+.clients,
+.clients-image{
+  grid-row: 2 / span 1;
 }
 
-.method, .method-image{
-  grid-row: 3/4;
+.method,
+.method-image{
+  grid-row: 3 / span 1;
 }
 
-.contact, .contact-image{
-  grid-row: 4/5;
+.contact,
+.contact-image{
+  grid-row: 4 / span 1;
 }
 
 .text{
@@ -163,7 +174,7 @@ img{
   nav{
     padding-top: 35px;
     /*Requirement 11*/
-    text-align: end;
+    text-align: right;
 
   }
 
@@ -174,20 +185,25 @@ img{
 
   
   /* Requirements 12-15 here: */
-  a.skip:focus{
-    transform: translateX(0%);
-    transform: translateY(20px);
+  .skip:focus{
+    left: 0px;
+    top: 20px;
   }
   .container{
-    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
   }
 
-  .about, .method, .clients-image, .contact-image{
+  .about,
+  .method,
+  .clients-image,
+  .contact-image{
     grid-column: 3 / span 2;
   }
-  .clients, .contact, .about-image, .method-image{
+  .clients,
+  .contact,
+  .about-image,
+  .method-image{
     grid-column: 2 / span 2;
   }
 
